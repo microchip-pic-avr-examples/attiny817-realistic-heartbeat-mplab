@@ -1,41 +1,43 @@
 <!-- Please do not change this logo with link -->
 [![MCHP](images/microchip.png)](https://www.microchip.com)
 
-# Update the title for attiny817-realistic-heartbeat-mplab here
+# Realistic Heartbeat
 
-<!-- This is where the introduction to the example goes, including mentioning the peripherals used -->
+This example outputs a PWM signal to an LED, where the duty cycle of the PWM signal is dynamically increased or decreased to change the brightness of the LED in order to mimic a heartbeat. The LED pulsates 100% independently of the CPU after the initial setup with a configurable Beats Per Minute (BPM). This is done by using three of the core independent peripherals of the ATtiny817: TCB, TCD and CCL. After the initial setup, the CPU is turned off by using the idle sleep mode, while the LED continues to pulsate.
+
+This example is programmed bare metal, i.e. no Atmel START drivers. Another version of the example with START drivers is also available.
+
+If the example is run on the ATtiny817 Xplained Pro Development Board, the LED0 will mimic the heartbeat. If just the ATtiny817 is being used, connect the anode (+) of an LED to VCC and cathode (-) to PB4 to see the same result. The example should also work with other devices in the tinyAVR-1 Series, but might require reconfiguring the output pin. 
+
+Included in the example is a function for changing the BPM and pulse length during run-time. The main file includes a detailed explanation of how the example works. Look at the set_heartbeat_BPM()-function in order to see how it is implemented in practice. 
 
 ## Related Documentation
 
-<!-- Any information about an application note or tech brief can be linked here. Use unbreakable links!
-     In addition a link to the device family landing page and relevant peripheral pages as well:
-     - [AN3381 - Brushless DC Fan Speed Control Using Temperature Input and Tachometer Feedback](https://microchip.com/00003381/)
-     - [PIC18F-Q10 Family Product Page](https://www.microchip.com/design-centers/8-bit/pic-mcus/device-selection/pic18f-q10-product-family) -->
+- [ATtiny817 Device Page](https://www.microchip.com/wwwproducts/en/ATtiny817)
 
 ## Software Used
 
-<!-- All software used in this example must be listed here. Use unbreakable links!
-     - MPLAB® X IDE 5.30 or newer [(microchip.com/mplab/mplab-x-ide)](http://www.microchip.com/mplab/mplab-x-ide)
-     - MPLAB® XC8 2.10 or a newer compiler [(microchip.com/mplab/compilers)](http://www.microchip.com/mplab/compilers)
-     - MPLAB® Code Configurator (MCC) 3.95.0 or newer [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
-     - MPLAB® Code Configurator (MCC) Device Libraries PIC10 / PIC12 / PIC16 / PIC18 MCUs [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
-     - Microchip PIC18F-Q Series Device Support (1.4.109) or newer [(packs.download.microchip.com/)](https://packs.download.microchip.com/) -->
+- [MPLAB® X IDE](http://www.microchip.com/mplab/mplab-x-ide) 5.40 or later
+- [ATtiny DFP](http://packs.download.atmel.com/) 2.2.89 or later
+- [MPLAB® XC8](http://www.microchip.com/mplab/compilers) 2.20 or a later
+- [AVR/GNU C Compiler](https://www.microchip.com/mplab/avr-support/avr-and-arm-toolchains-c-compilers) 5.4.0 or later
 
 ## Hardware Used
 
-<!-- All hardware used in this example must be listed here. Use unbreakable links!
-     - PIC18F47Q10 Curiosity Nano [(DM182029)](https://www.microchip.com/Developmenttools/ProductDetails/DM182029)
-     - Curiosity Nano Base for Click boards™ [(AC164162)](https://www.microchip.com/Developmenttools/ProductDetails/AC164162)
-     - POT Click board™ [(MIKROE-3402)](https://www.mikroe.com/pot-click) -->
-
-## Setup
-
-<!-- Explain how to connect hardware and set up software. Depending on complexity, step-by-step instructions and/or tables and/or images can be used -->
+- [ATtiny817 Xplained Pro](https://www.microchip.com/DevelopmentTools/ProductDetails/attiny817-xpro)
+- Micro-USB cable (Type-A/Micro-B)
 
 ## Operation
 
-<!-- Explain how to operate the example. Depending on complexity, step-by-step instructions and/or tables and/or images can be used -->
+1. Connect the ATtiny817 Xplained Pro board to the PC using the USB cable.
 
-## Summary
+2. Download the zip file or clone the example to get the source code.
 
-<!-- Summarize what the example has shown -->
+3. Open the project in MPLAB X IDE.
+
+4. Build the solution and program the ATtiny817. 
+
+5. Observe that the LED0 pulsates like a heartbeat on the board.
+
+## Conclusion
+The example has now shown how to use core independent peripherals to create a pulsating PWM signal that increase and decrease the brightness of an LED in order to mimic a heartbeat pulse, 100% free of the CPU after the initial set-up.
