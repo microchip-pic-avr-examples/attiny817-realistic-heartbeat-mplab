@@ -4,18 +4,18 @@
     "content": {
         "metaDataVersion": "1.1.0",
         "name": "com.microchip.mcu8.mplabx.project.attiny817-realistic-heartbeat-mplab",
-        "version": "1.0.0",
+        "version": "1.0.1",
         "displayName": "Realistic Heartbeat",
         "projectName": "attiny817-realistic-heartbeat-mplab",
         "shortDescription": "In this example the duty cycle of the PWM signal is dynamically increased or decreased to change the brightness of the LED in order to mimic a heartbeat.",
         "ide": {
-            "name": "MPLABX",
-            "semverRange": ">=5.40"
+            "name": "MPLAB X",
+            "semverRange": ">=5.40.0"
         },
         "compiler": [
             {
                 "name": "XC8",
-                "semverRange": "^2.29"
+                "semverRange": "^2.29.0"
             }
         ],
         "dfp": {
@@ -60,8 +60,7 @@
             "TCD",
             "CCL"
         ],
-        "keywords": [
-        ],
+        "keywords": [],
         "additionalData": {
             "longDescription": {
                 "metaDataVersion": "1.0.0",
