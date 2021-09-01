@@ -60,7 +60,13 @@
             "TCD",
             "CCL"
         ],
-        "keywords": [],
+        "keywords": [
+            "Idle",
+            "Sleep",
+            "CIP",
+            "LED",
+            "PWM"
+        ],
         "additionalData": {
             "longDescription": {
                 "metaDataVersion": "1.0.0",
