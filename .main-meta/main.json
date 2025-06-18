@@ -10,17 +10,17 @@
         "shortDescription": "In this example the duty cycle of the PWM signal is dynamically increased or decreased to change the brightness of the LED in order to mimic a heartbeat.",
         "ide": {
             "name": "MPLAB X",
-            "semverRange": ">=5.40.0"
+            "semverRange": ">=6.25.0"
         },
         "compiler": [
             {
                 "name": "XC8",
-                "semverRange": "^2.29.0"
+                "semverRange": "^3.00.0"
             }
         ],
         "dfp": {
             "name": "ATtiny_DFP",
-            "semverRange": "^2.2.89"
+            "semverRange": "^3.3.272"
         },
         "configurator": {
             "name": "N/A",
